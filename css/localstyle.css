@@ -1,0 +1,222 @@
+#initCarrossel {
+    position: relative;
+    width: 100%;
+    top: 56px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#missao {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+}
+
+#visao {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+}
+
+#valores {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+}
+
+#historia {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+}
+
+#dpac {
+    position: relative;
+    width: 100%;
+
+}
+
+#footer {
+    background-color: black;
+    position: relative;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+}
+
+.expediente {
+    color: #3FB1A9;
+    padding: 0, 0, 0, 0;
+    margin: auto 0;
+}
+
+.plicense {
+    color: #3FB1A9;
+    text-align: center;
+    margin: auto 0;
+}
+
+.bordafoto {
+    border-radius: 5%;
+}
+
+.w-40 {
+    width: 47% !important;
+}
+
+i {
+    padding: 10px;
+}
+
+.collapse i,
+.form-group i,
+.col-md-7 i,
+.col-md-6 i,
+.nav.link {
+    padding: 8px;
+}
+
+.pcarrossel {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.pmisvisval {
+    font-size: 2.5rem;
+    text-align: center;
+	
+    background-color: #1835b14a;
+    color: #dee2e6;
+    text-shadow: 0 0 6px black;
+	
+}
+
+.pmissao,
+.pvisao,
+.pvalores {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-left: 170px;
+    margin-right: 170px;
+}
+
+.pdpac-just {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-left: 170px;
+    margin-right: 170px;
+}
+
+.pdpac-left {
+    font-size: 1.5rem;
+    text-align: center;
+	margin-top: 40;
+    color: #f8f9fa;
+    text-shadow: 0 0 5px black;
+}
+
+.pdpac-title {
+    font-size: 2.5rem;
+    text-align: center;
+	
+	color: white;
+    text-decoration: underline;
+    text-shadow: 0 0 2px black;
+}
+
+.dpac-li {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 170px;
+}
+
+
+/*=========== CONTAINER ==========*/
+
+.container {
+    width: 100%;
+    float: none;
+    padding: 3% 4%;
+    text-align: center;
+}
+
+
+/*=========== BG COLORS ==========*/
+
+.bg-gradblue {
+    background: linear-gradient(to right, #3e646d, #00b2e1, #3e646d);
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, #3e646d, black, #3e646d);
+}
+
+.bg-black {
+    background-color: #130400;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+
+/* RODAPÉ */
+
+.social-icons a {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 3%;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    p.lead,
+    img.img-hide {
+        display: none;
+    }
+    .pmissao,
+    .pvisao,
+    .pvalores {
+        font-size: 1.2rem;
+        text-align: justify;
+        margin-left: 30px;
+        margin-right: 70px;
+    }
+    .pdpac-just {
+        font-size: 1.2rem;
+        text-align: justify;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .pdpac-left {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-left: 30px;
+		margin-top: 40px;
+		color: black;
+		text-shadow: 0 0 11px black;
+    }
+    .pdpac-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: 30px;
+    }
+    .dpac-li {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-left: 30px;
+    }
+}

@@ -1,0 +1,456 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <!--TAG para responsividade-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Referências para CSS Local-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/localstyle.css">
+    <!--Referência para Fontawesome-->
+    <script src="https://kit.fontawesome.com/d7a880eefe.js" crossorigin="anonymous"></script>
+    <!--Referência para jquery on-line (Bootstrap)-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Referência para javascript local-->
+    <script type="text/javascript" src="./js/func.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <!--Título do Site Institucional-->
+    <title>H.A.W.Ga.M</title>
+</head>
+
+<body>
+    <!--Aqui começa o conteúdo da NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; top:0px; z-index:10">
+        <a class="navbar-brand" href="#">H.A.W.Ga.M</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html"><i class="fas fa-home"></i>Home<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore HAWGaM</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#missao">Missão</a>
+                        <a class="dropdown-item" href="#visao">Visão</a>
+                        <a class="dropdown-item" href="#valores">Valores</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#historia">HAWGaM</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#dpac">DPAC</a>
+                    </div>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <i class="fas fa-user"></i> <input class="form-control mr-sm-2" type="email" name="txtemail" placeholder="Digite seu e-mail" aria-label="Search" required>
+                <i class="fas fa-key"></i> <input class="form-control mr-sm-2" type="password" name="txtpwd" placeholder="Digite sua Senha" aria-label="Search" required>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="userlogin(txtemail.value, txtpwd.value)"><i class="fas fa-user"></i>Login</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#modalCadastro"><i class="far fa-address-card"></i>Cadastro</button>
+            </form>
+        </div>
+    </nav>
+    <!--Aqui começa o conteúdo dos CARDS-->
+    <div id=cards>
+
+        <nav class="nav nav-pills flex-column flex-sm-row">
+
+            <div class="card" style="width: 23.7rem;">
+                <img src="./img/Missão.png" class="card-img-top" alt="Missão">
+                <div class="card-body">
+                    <a href="#missao" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-clipboard-list"></i>Nossa Missão</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 23.7rem;">
+                <img src="./img/Visão.png" class="card-img-top" alt="Visão">
+                <div class="card-body">
+                    <a href="#visao" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-eye"></i>Nossa Visão</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 23.7rem;">
+                <img src="./img/Valores.png" class="card-img-top" alt="Valores">
+                <div class="card-body">
+                    <a href="#valores" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-medal"></i>Nossos Valores</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 23.7rem;">
+                <img src="./img/Logo_00.png" class="card-img-top" alt="HAWGaM">
+                <div class="card-body">
+                    <a href="#historia" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-assistive-listening-systems"></i>Nossa História</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Aqui começa o conteúdo da missão da companhia-->
+    <div id=missao>
+        <p class="pmisvisval">MISSÃO</p>
+        <p class="pmissao">A Empresa H.A.W.Ga.M, dedica-se a mistura de talento e sonho, criando produtos e serviços que contribuam para a melhoria da sociedade e o bem estar global. Para isso, dá grande importância para seus profissionais, que formam e fazem desta empresa
+            o que ela é.</p>
+    </div>
+
+    <!--Aqui começa o conteúdo da visão da companhia-->
+    <div id=visao>
+        <p class="pmisvisval">VISÃO</p>
+        <p class="pvisao">A Empresa H.A.W.Ga.M, dedica-se a mistura de talento e sonho, criando produtos e serviços que contribuam para a melhoria da sociedade e o bem estar global. Para isso, dá grande importância para seus profissionais, que formam e fazem desta empresa
+            o que ela é.</p>
+    </div>
+
+    <!--Aqui começa o conteúdo dos valores da companhia-->
+    <div id=valores>
+        <p class="pmisvisval">VALORES</p>
+        <p class="pvalores">Sempre prezando a dedicação individual e coletiva dos colaboradores a fim do constante processo de melhoria da empresa, pensando sempre em inovação e tecnologia. Confiança, honestidade e responsabilidade são nossos princípios, para o avanço da
+            sociedade afim de promover uma convivência prazerosa e respeitosa, visando sempre o bem-estar. Além de adotarmos uma postura respeitosa e ética para estimular o sucesso de todos os clientes.</p>
+    </div>
+
+    <!--Aqui começa o conteúdo da história da HAWGaM-->
+    <div id=historia>
+        <p class="pmisvisval">HISTÓRIA</p>
+    </div>
+
+    <!--Aqui começa o conteúdo do DPAC-->
+    <div id=dpac>
+        <div id=dpacimg>
+            <img id=imgdpac src="./img/dpac.jpg" class="rounded mx-auto d-block">
+        </div>
+
+        <p class="pdpac-title">O que é o DPAC?</p>
+
+        <ul class="list-unstyled">
+            <li class="media">
+                <div class="media-body">
+                    <img src="./img/escuta-mais-não-entende.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
+                    <h5 class="mt-0 mb-1">Distúrbio do Processamento Auditivo Central.</h5>
+                    <p class="pdpac-just">Também chamado de DPAC, é um distúrbio auditivo onde o paciente não tem quaisquer deficiências auditivas em relação ao que é ouvido, porém possui uma dificuldade em processar e por consequência entender o que foi ouvido. Este distúrbio
+                        é identificado através de exames clínicos específicos realizados em cabines de audiometria com profissionais qualificados. O tratamento também deve ser realizado por profissional qualificado da área da fonoaudiologia em que através
+                        de exercícios auditivos treinam o sistema auditivo do paciente até ser capaz de processar tudo o que lhe é falado. Como consequência distúrbio do PAC o paciente não é capaz de reconhecer / compreender muitas informações que são
+                        ouvidas, porém não há neste cenário clássico nenhuma relação com perda de audição e neste cenário temos inúmeros casos em que o paciente é diagnosticado com outras síndromes ou distúrbios comportamentais. A seguir, os principais
+                        sintomas que podem ser percebidos na criança com DPAC:
+                    </p>
+                </div>
+            </li>
+
+            <ul>
+                <li class="dpac-li">Dificuldade de memorização em atividades diárias;</li>
+                <li class="dpac-li">Dificuldades acadêmicas para ler e escrever;</li>
+                <li class="dpac-li">Fadiga atencional em aulas ou palestras;</li>
+                <li class="dpac-li">Troca de letras na fala ou escrita;</li>
+                <li class="dpac-li">Demora em compreender o que foi dito;</li>
+                <li class="dpac-li">Dificuldades em compreender informações em ambientes ruidosos;</li>
+                <li class="dpac-li">Desatenção e distração;</li>
+                <li class="dpac-li">Solicita repetição constante da informação;</li>
+                <li class="dpac-li">Agitação;</li>
+                <li class="dpac-li">Dificuldade para entender conceitos abstratos ou duplo sentido;</li>
+                <li class="dpac-li">Dificuldade para executar tarefas que lhe foram solicitadas;</li>
+            </ul>
+            <br>
+            <br>
+            <li class="media">
+                <div class="media-body">
+                    <img src="./img/banner_entenda_o_problema_pac.png" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
+                    <h5 class="mt-0 mb-1">Avaliação do processamento auditivo central (PAC)</h5>
+                    <p class="pdpac-left">O que é o exame?</p>
+                    <p class="pdpac-just">O Processamento Auditivo Central (PAC) avalia uma série de operações mentais que o indivíduo realiza ao lidar com informações recebidas via o sentido da audição, ou seja, avalia como o cérebro processa (analisa e interpreta) às informações
+                        que o indivíduo escutou. Dessa forma, existe uma de habilidades que desenvolvemos ao longo do tempo como, por exemplo, localização sonora, discriminar e reconhecer sons memorizá-los em sequências, são algumas das habilidades que
+                        estão envolvidas nesse processo. Alterações de processamento auditivo central podem ocorrer mesmo em pessoas com audição normal.</p>
+                </div>
+            </li>
+
+            <li class="media">
+                <div class="media-body">
+                    <img src="./img/people-316506_1280-1200x794.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
+                    <p class="pdpac-left">Como é realizado?</p>
+                    <p class="pdpac-just">É realizado em três sessões de avaliação do processamento auditivo. O exame é feito dentro de uma cabina acústica e o indivíduo realizará alguns testes, selecionados de acordo com a faixa etária e presença ou não de alterações auditivas.
+                        Esses testes têm por finalidade avaliar as habilidades auditivas para que possamos compreender melhor se algum desses processos está alterado. É importante que exista uma audiometria recente, dessa forma, é comum, quando o paciente
+                        não tem, seja realizada uma audiometria completa antes dos testes.</p>
+                </div>
+            </li>
+
+            <li class="media">
+                <div class="media-body">
+                    <img src="./img/pac-1200x480.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
+                    <p class="pdpac-left">Indicação</p>
+                    <p class="pdpac-just">A alteração do processamento auditivo pode ocorrer mesmo em indivíduos que apresentem uma audição normal. É um exame indicado quando a pessoa apresenta queixas e/ou sinais que podem estar relacionas às alterações de PAC. Por exemplo,
+                        indivíduos desatentos, distraídos, com dificuldades escolares, alterações de fala, memória, dificuldades no processo de aquisição da leitura e escrita, em compreender piadas e ironias, ou organizar o discurso, pessoas em que ambientes
+                        ruidosos (ruas, escolas, reuniões, etc.) são lugares em que apresentam mais dificuldade em ouvir e prestar atenção ao que foi falado, conversas longas, ou com várias pessoas falando ao mesmo tempo, são mais difíceis para serem
+                        acompanhadas, solicita muita repetição do que foi dito.</p>
+                </div>
+            </li>
+
+    </div>
+
+    <!--Aqui começa o formulário de cadastro-->
+    <!-- Mostrando o Formulário de Cadastro em um Modal Longo-->
+    <!-- Modal -->
+    <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="modalCadastroTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title display-5" id="modalCadastroTitle">Cadastro</h5>
+                    <button type="button" onclick="limpaFormAll()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form name="f1" method="get" action="/action_page.php">
+                        <div class="form-row">
+                            <div class="col-md-11 mb-3">
+                                <label for="validationCustom01">Nome</label>
+                                <input type="text" class="form-control" id="campo1" placeholder="Nome" onchange="nomeUppercase()" onKeyUp="tabenter(event,getElementById('campo2'))" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-11 mb-3">
+                                <label for="validationCustom02">Sobrenome</label>
+                                <input type="text" class="form-control" id="campo2" placeholder="Sobrenome" onchange="sobrenoUppercase()" onKeyUp="tabenter(event,getElementById('campo3'))" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-11 mb-3">
+                                <label for="validationCustom03">CPF</label>
+                                <input name="strCPF" type="number" maxlength="11" max="11" class="form-control" id="campo3" onblur="testaCPF(strCPF.value)" onfocus="mascaraDoCpf(this)" placeholder="000.000.000-00" onKeyUp="tabenter(event,getElementById('cep'))" required>
+                                <div id="msgCPF"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputAddress04">CEP</label>
+                                <input name="cep" type="text" maxlength="8" max="8" class="form-control" id="cep" onblur="pesquisacep(this.value);mascaraDeCep(this)" placeholder="00000-000" onKeyUp="tabenter(event,getElementById('inputAddress02'))" required>
+                                <div id="msgCep"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-11 mb-4">
+                                <label for="rua">Rua</label>
+                                <input name="rua" type="text" class="form-control" id="rua" placeholder="Logradouro" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputAddress02">Número</label>
+                                <input type="number" class="form-control" id="inputAddress02" placeholder="Nº" onKeyUp="tabenter(event,getElementById('inputAddress03'))">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputAddress03">Complemento</label>
+                                <input type="text" class="form-control" id="inputAddress03" placeholder="Apto-x" onKeyUp="tabenter(event,getElementById('telefone'))">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bairro">Bairro</label>
+                                <input name="bairro" type="text" class="form-control" id="bairro" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="cidade">Cidade</label>
+                                <input name="cidade" type="text" class="form-control" id="cidade" disabled>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="uf">Estado</label>
+                                <input name="uf" type="text" class="form-control" id="uf" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="telefone"><i class="fas fa-phone"></i>Telefone</label>
+                                <input name="telefone" type="text" maxlength="11" class="form-control" id="telefone" placeholder="(11)9999-99999" onblur="mascaraDeTelefone(this)" onfocus="tiraHifen(this)" onKeyUp="tabenter(event,getElementById('email'))" required>
+                            </div>
+                            <div class="col-md-7 mb-3">
+                                <label for="validationCustom03"><i class="fas fa-at"></i>E-mail</label>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="email@dominio.com" onblur="validacaoEmail(f1.email)" maxlength="60" size='65' onKeyUp="tabenter(event,getElementById('password'))" required>
+                                <div id="msgemail"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03"><i class="fas fa-key"></i>Senha</label>
+                                <input type="password" class="form-control" name="password1" id="password1" placeholder="Senha" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size='50' onKeyUp="tabenter(event,getElementById('password2'))" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03"><i class="fas fa-key"></i>Confirme a Senha</label>
+                                <input type="password" class="form-control" name="password2" id="password2" onchange="validatePassword()" placeholder="Senha" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size='50' onKeyUp="tabenter(event,getElementById('gridCheck'))" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="chekpsw" onclick="mostrarSenha()">
+                                <label class="form-check-label" for="gridCheck">Mostrar Senha</label>
+                            </div>
+                        </div>
+
+                        <div id="msgSenha" class="validationCustom03"></div>
+                        <!--Teste de Password-->
+
+                        <div id="message">
+                            <h3>A Senha deverá conter:</h3>
+                            <p id="letter" class="invalid">Uma Letra <b>minúscula</b></p>
+                            <p id="capital" class="invalid">Uma letra <b>MAIÚSCULA</b></p>
+                            <p id="number" class="invalid">Um <b>Número</b></p>
+                            <p id="length" class="invalid">Mínimo de <b>8 Caracteres</b></p>
+                        </div>
+
+                        <script>
+                            var myInput = document.getElementById("password1");
+                            var myInput2 = document.getElementById("password2");
+                            var letter = document.getElementById("letter");
+                            var capital = document.getElementById("capital");
+                            var number = document.getElementById("number");
+                            var length = document.getElementById("length");
+
+                            // When the user clicks on the password field, show the message box
+                            myInput.onfocus = function() {
+                                document.getElementById("message").style.display = "block";
+                            }
+                            myInput2.onfocus = function() {
+                                document.getElementById("message").style.display = "block";
+                            }
+
+                            // When the user clicks outside of the password field, hide the message box
+                            myInput.onblur = function() {
+                                document.getElementById("message").style.display = "none";
+                            }
+                            myInput2.onblur = function() {
+                                document.getElementById("message").style.display = "none";
+                            }
+
+                            // When the user starts to type something inside the password field
+                            myInput.onkeyup = function() {
+                                // Validate lowercase letters
+                                var lowerCaseLetters = /[a-z]/g;
+                                if (myInput.value.match(lowerCaseLetters)) {
+                                    letter.classList.remove("invalid");
+                                    letter.classList.add("valid");
+                                } else {
+                                    letter.classList.remove("valid");
+                                    letter.classList.add("invalid");
+                                }
+
+                                // Validate capital letters
+                                var upperCaseLetters = /[A-Z]/g;
+                                if (myInput.value.match(upperCaseLetters)) {
+                                    capital.classList.remove("invalid");
+                                    capital.classList.add("valid");
+                                } else {
+                                    capital.classList.remove("valid");
+                                    capital.classList.add("invalid");
+                                }
+
+                                // Validate numbers
+                                var numbers = /[0-9]/g;
+                                if (myInput.value.match(numbers)) {
+                                    number.classList.remove("invalid");
+                                    number.classList.add("valid");
+                                } else {
+                                    number.classList.remove("valid");
+                                    number.classList.add("invalid");
+                                }
+
+                                // Validate length
+                                if (myInput.value.length >= 8) {
+                                    length.classList.remove("invalid");
+                                    length.classList.add("valid");
+                                } else {
+                                    length.classList.remove("valid");
+                                    length.classList.add("invalid");
+                                }
+
+                            }
+
+
+                            // When the user starts to type something inside the password field
+                            myInput2.onkeyup = function() {
+                                // Validate lowercase letters
+                                var lowerCaseLetters = /[a-z]/g;
+                                if (myInput2.value.match(lowerCaseLetters)) {
+                                    letter.classList.remove("invalid");
+                                    letter.classList.add("valid");
+                                } else {
+                                    letter.classList.remove("valid");
+                                    letter.classList.add("invalid");
+                                }
+
+                                // Validate capital letters
+                                var upperCaseLetters = /[A-Z]/g;
+                                if (myInput2.value.match(upperCaseLetters)) {
+                                    capital.classList.remove("invalid");
+                                    capital.classList.add("valid");
+                                } else {
+                                    capital.classList.remove("valid");
+                                    capital.classList.add("invalid");
+                                }
+
+                                // Validate numbers
+                                var numbers = /[0-9]/g;
+                                if (myInput2.value.match(numbers)) {
+                                    number.classList.remove("invalid");
+                                    number.classList.add("valid");
+                                } else {
+                                    number.classList.remove("valid");
+                                    number.classList.add("invalid");
+                                }
+
+                                // Validate length
+                                if (myInput2.value.length >= 8) {
+                                    length.classList.remove("invalid");
+                                    length.classList.add("valid");
+                                } else {
+                                    length.classList.remove("valid");
+                                    length.classList.add("invalid");
+                                }
+                            }
+                        </script>
+
+                        <!--Final do teste de Password-->
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck"><a href="./docs/termo_de_utilizacao.pdf">Aceita todos os Termos.</a></label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="limpaFormAll()">Fechar</button>
+                    <button type="button" class="btn btn-primary" value="Cadastrar" onclick="cadstForm()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Aqui começa o conteúdo do FOOTER-->
+    <div id=footer>
+        <div id="footermsocial">
+            <h6 style="text-align: center; color: #3FB1A9;">Redes Sociais</h6>
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="https://www.facebook.com/onix.geekrd.7"><i class="fab fa-facebook-square"></i>facebook</a></button>
+                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="https://www.instagram.com/onixgeekrd2019/"><i class="fab fa-instagram"></i>Instagram</a></button>
+                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="https://www.youtube.com/channel/UCczRp4bENNL_Lc32uz07C0Q/"><i class="fab fa-youtube"></i>Youtube</a></button>
+                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="www.github.com"><i class="fab fa-github-square"></i>Github</a></button>
+            </nav>
+        </div>
+        <br>
+        <div id="footerexpediente">
+            <p class="expediente" style="text-align: center;">PTCC - Etec Horácio Augusto da Silveira</p>
+            <p class="expediente">Desenvolvedores H.A.Ga.M: Humberto - Alex Sandro - Wellington Mendes - Gabriel Harmony - Marco Royo Felippe</p>
+        </div>
+
+        <div id="footerlicense">
+            <p class="plicense"> - copyright 2020 - </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
