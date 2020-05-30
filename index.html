@@ -1,6 +1,10 @@
 <html lang="pt-br">
 
 <head>
+    <meta name="description" content="Tratamento DPAC">
+    <meta name="keywords" content="Fonoaudiologia, Sites, DPAC">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="H.A.W.Ga.M: Humberto - Alex Sandro - Wellington Mendes - Gabriel Harmony - Marco Royo Felippe">
     <meta charset="utf-8">
     <!--TAG para responsividade-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="./css/localstyle.css">
     <!--Referência para Fontawesome-->
     <script src="https://kit.fontawesome.com/d7a880eefe.js" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <!--Referência para jquery on-line (Bootstrap)-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -19,11 +25,13 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <!--Título do Site Institucional-->
     <title>H.A.W.Ga.M</title>
+    <!--Icone-->
+    <link rel="icon" href="./img/Logo4.jpeg">
 </head>
 
-<body>
+<body class="bg-gradblue">
     <!--Aqui começa o conteúdo da NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; top:0px; z-index:10">
+    <nav class="navbar navbar-expand-lg navbar-light bg-gradblue" style="position: fixed; width: 100%; top:0px; z-index:10">
         <a class="navbar-brand" href="#">H.A.W.Ga.M</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,7 +44,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore HAWGaM</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i>Explore HAWGaM</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#missao">Missão</a>
                         <a class="dropdown-item" href="#visao">Visão</a>
@@ -48,48 +56,68 @@
                     </div>
                 </li>
             </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <i class="fas fa-user"></i> <input class="form-control mr-sm-2" type="email" name="txtemail" placeholder="Digite seu e-mail" aria-label="Search" required>
-                <i class="fas fa-key"></i> <input class="form-control mr-sm-2" type="password" name="txtpwd" placeholder="Digite sua Senha" aria-label="Search" required>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="userlogin(txtemail.value, txtpwd.value)"><i class="fas fa-user"></i>Login</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#modalCadastro"><i class="far fa-address-card"></i>Cadastro</button>
-            </form>
+            <div id="form">
+                <form class="form-inline my-2 my-lg-0">
+                    <!--Adicionei umas DIVs para os botões ficar separados e no mesmo nível-->
+                    <div class="form-group mb-2">
+                        <i class="fas fa-user"></i> <input class="form-control mr-sm-2" type="email" name="txtemail" placeholder="Digite seu e-mail" aria-label="Search" required>
+                        <i class="fas fa-key"></i> <input class="form-control mr-sm-2" type="password" name="txtpwd" placeholder="Digite sua Senha" aria-label="Search" required>
+                    </div>
+                    <div class="form-group mx-sm-2 mb-2">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="userlogin(txtemail.value, txtpwd.value)"><i class="fas fa-user"></i>Login</button>
+                        <button class="btn btn-outline-success my-10 mx-sm-2" type="button" data-toggle="modal" data-target="#modalCadastro"><i class="far fa-address-card"></i>Cadastro</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </nav>
-    <!--Aqui começa o conteúdo dos CARDS-->
-    <div id=cards>
 
-        <nav class="nav nav-pills flex-column flex-sm-row">
 
-            <div class="card" style="width: 23.7rem;">
-                <img src="./img/Missão.png" class="card-img-top" alt="Missão">
-                <div class="card-body">
-                    <a href="#missao" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-clipboard-list"></i>Nossa Missão</a>
+    <!--Aqui começa o conteúdo do CARROSSEL-->
+    <div class="bd-example">
+        <div id="initCarrossel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#initCarrossel" data-slide-to="0" class="active"></li>
+                <li data-target="#initCarrossel" data-slide-to="1"></li>
+                <li data-target="#initCarrossel" data-slide-to="2"></li>
+                <li data-target="#initCarrossel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2500">
+                    <a href="#missao"><img src="./img/missao.jpg" class="img-fluid mx-auto d-block w-50 bordafoto" alt="Nossa Missão"></a>
+                    <!--<div class="carousel-caption d-none d-md-block">
+                        <p class="pcarrossel">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>-->
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                    <a href="#visao"><img src="./img/visao.jpg" class="img-fluid mx-auto d-block w-50 bordafoto" alt="Nossa Visão"></a>
+                    <!--<div class="carousel-caption d-none d-md-block">
+                        <p class="pcarrossel">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>-->
+                </div>
+                <div class="carousel-item" data-interval="2500">
+                    <a href="#valores"><img src="./img/valores.jpg" class="img-fluid mx-auto d-block w-50 bordafoto" alt="Nossos Valores"></a>
+                    <!--<div class="carousel-caption d-none d-md-block">
+                        <p class="pcarrossel">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>-->
+                </div>
+
+                <div class="carousel-item" data-interval="2500">
+                    <a href="#historia"><img src="./img/hawgam2.jpg" class="img-fluid mx-auto d-block w-40 bordafoto" alt="Nossos Valores"></a>
+                    <!--<div class="carousel-caption d-none d-md-block">
+                        <p class="pcarrossel">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>-->
                 </div>
             </div>
-
-            <div class="card" style="width: 23.7rem;">
-                <img src="./img/Visão.png" class="card-img-top" alt="Visão">
-                <div class="card-body">
-                    <a href="#visao" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-eye"></i>Nossa Visão</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 23.7rem;">
-                <img src="./img/Valores.png" class="card-img-top" alt="Valores">
-                <div class="card-body">
-                    <a href="#valores" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-medal"></i>Nossos Valores</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 23.7rem;">
-                <img src="./img/Logo_00.png" class="card-img-top" alt="HAWGaM">
-                <div class="card-body">
-                    <a href="#historia" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-assistive-listening-systems"></i>Nossa História</a>
-                </div>
-            </div>
-        </nav>
+            <a class="carousel-control-prev" href="#initCarrossel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#initCarrossel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
 
     <!--Aqui começa o conteúdo da missão da companhia-->
@@ -102,15 +130,14 @@
     <!--Aqui começa o conteúdo da visão da companhia-->
     <div id=visao>
         <p class="pmisvisval">VISÃO</p>
-        <p class="pvisao">A Empresa H.A.W.Ga.M, dedica-se a mistura de talento e sonho, criando produtos e serviços que contribuam para a melhoria da sociedade e o bem estar global. Para isso, dá grande importância para seus profissionais, que formam e fazem desta empresa
-            o que ela é.</p>
+        <p class="pvisao">Esforço de modo colaborativo afim de proporcionar a melhoria da qualidade de vida da população. Garantindo integridade, qualidade e inovação de nossos serviços e produtos, sempre prezando a satisfação e aprovação de nossos clientes.</p>
     </div>
 
     <!--Aqui começa o conteúdo dos valores da companhia-->
     <div id=valores>
         <p class="pmisvisval">VALORES</p>
-        <p class="pvalores">Sempre prezando a dedicação individual e coletiva dos colaboradores a fim do constante processo de melhoria da empresa, pensando sempre em inovação e tecnologia. Confiança, honestidade e responsabilidade são nossos princípios, para o avanço da
-            sociedade afim de promover uma convivência prazerosa e respeitosa, visando sempre o bem-estar. Além de adotarmos uma postura respeitosa e ética para estimular o sucesso de todos os clientes.</p>
+        <p class="pvalores">Sempre prezando a dedicação individual e coletiva dos colaboradores buscando o constante processo de melhoria da empresa, pensando sempre em inovação e tecnologia. Confiança, honestidade e responsabilidade são nossos princípios, para o avanço
+            da sociedade afim de promover uma convivência prazerosa e respeitosa, visando sempre o bem-estar. Além de adotarmos uma postura respeitosa e ética para estimular o sucesso de todos os clientes.</p>
     </div>
 
     <!--Aqui começa o conteúdo da história da HAWGaM-->
@@ -120,23 +147,22 @@
 
     <!--Aqui começa o conteúdo do DPAC-->
     <div id=dpac>
-        <div id=dpacimg>
-            <img id=imgdpac src="./img/dpac.jpg" class="rounded mx-auto d-block">
+		<p class="pdpac-title">O que é o DPAC?</p>
+	
+        <div id="dpacimg">
+            <img id="dpacimg" src="./img/dpac.jpg" class="img-fluid mx-auto d-block" alt="DPAC">
         </div>
-
-        <p class="pdpac-title">O que é o DPAC?</p>
 
         <ul class="list-unstyled">
             <li class="media">
                 <div class="media-body">
-                    <img src="./img/escuta-mais-não-entende.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
-                    <h5 class="mt-0 mb-1">Distúrbio do Processamento Auditivo Central.</h5>
-                    <p class="pdpac-just">Também chamado de DPAC, é um distúrbio auditivo onde o paciente não tem quaisquer deficiências auditivas em relação ao que é ouvido, porém possui uma dificuldade em processar e por consequência entender o que foi ouvido. Este distúrbio
-                        é identificado através de exames clínicos específicos realizados em cabines de audiometria com profissionais qualificados. O tratamento também deve ser realizado por profissional qualificado da área da fonoaudiologia em que através
-                        de exercícios auditivos treinam o sistema auditivo do paciente até ser capaz de processar tudo o que lhe é falado. Como consequência distúrbio do PAC o paciente não é capaz de reconhecer / compreender muitas informações que são
-                        ouvidas, porém não há neste cenário clássico nenhuma relação com perda de audição e neste cenário temos inúmeros casos em que o paciente é diagnosticado com outras síndromes ou distúrbios comportamentais. A seguir, os principais
-                        sintomas que podem ser percebidos na criança com DPAC:
+                    <p class="pdpac-left">Distúrbio do Processamento Auditivo Central.</p>
+                    <p class="pdpac-just">Também chamado de DPAC, é um distúrbio auditivo onde o paciente geralmente não apresenta deficiências auditivas em relação ao que é ouvido, porém possui uma dificuldade em processar o que é escutado e por consequência acaba não entendento
+                        o que foi ouvido. Este distúrbio é identificado através de exames clínicos específicos realizados em cabines de audiometria com profissionais qualificados. O tratamento também deve ser realizado por profissional qualificado da
+                        área da fonoaudiologia que através de exercícios auditivos treinam o sistema do processamento central do paciente até ser capaz de processar tudo o que lhe é falado. É comum que paciente acometidos de DPAC sejam erroneamente diagnosticado
+                        com outras síndromes ou distúrbios comportamentais.
                     </p>
+                    <p class="pdpac-just">A seguir, os principais sintomas que podem ser percebidos na criança com DPAC:</p>
                 </div>
             </li>
 
@@ -157,8 +183,10 @@
             <br>
             <li class="media">
                 <div class="media-body">
-                    <img src="./img/banner_entenda_o_problema_pac.png" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
-                    <h5 class="mt-0 mb-1">Avaliação do processamento auditivo central (PAC)</h5>
+                    <p class="pdpac-title">
+                        <img src="./img/Ouvido_onda.jpeg" class="img-fluid mr-3 img-hide" alt="Escuta mas não entende">
+                    </p>
+                    <p class="pmisvisval">Avaliação do processamento auditivo central (PAC)</p>
                     <p class="pdpac-left">O que é o exame?</p>
                     <p class="pdpac-just">O Processamento Auditivo Central (PAC) avalia uma série de operações mentais que o indivíduo realiza ao lidar com informações recebidas via o sentido da audição, ou seja, avalia como o cérebro processa (analisa e interpreta) às informações
                         que o indivíduo escutou. Dessa forma, existe uma de habilidades que desenvolvemos ao longo do tempo como, por exemplo, localização sonora, discriminar e reconhecer sons memorizá-los em sequências, são algumas das habilidades que
@@ -168,7 +196,9 @@
 
             <li class="media">
                 <div class="media-body">
-                    <img src="./img/people-316506_1280-1200x794.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
+                    <p class="pdpac-title">
+                        <img src="./img/people-316506_1280-1200x794.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="500" height="300">
+                    </p>
                     <p class="pdpac-left">Como é realizado?</p>
                     <p class="pdpac-just">É realizado em três sessões de avaliação do processamento auditivo. O exame é feito dentro de uma cabina acústica e o indivíduo realizará alguns testes, selecionados de acordo com a faixa etária e presença ou não de alterações auditivas.
                         Esses testes têm por finalidade avaliar as habilidades auditivas para que possamos compreender melhor se algum desses processos está alterado. É importante que exista uma audiometria recente, dessa forma, é comum, quando o paciente
@@ -178,7 +208,9 @@
 
             <li class="media">
                 <div class="media-body">
-                    <img src="./img/pac-1200x480.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="200" height="200">
+                    <p class="pdpac-title">
+                        <img src="./img/pac-1200x480.jpg" class="mr-3 img-hide" alt="Escuta mas não entende" width="500" height="300">
+                    </p>
                     <p class="pdpac-left">Indicação</p>
                     <p class="pdpac-just">A alteração do processamento auditivo pode ocorrer mesmo em indivíduos que apresentem uma audição normal. É um exame indicado quando a pessoa apresenta queixas e/ou sinais que podem estar relacionas às alterações de PAC. Por exemplo,
                         indivíduos desatentos, distraídos, com dificuldades escolares, alterações de fala, memória, dificuldades no processo de aquisição da leitura e escrita, em compreender piadas e ironias, ou organizar o discurso, pessoas em que ambientes
@@ -186,6 +218,7 @@
                         acompanhadas, solicita muita repetição do que foi dito.</p>
                 </div>
             </li>
+        </ul>
 
     </div>
 
@@ -430,27 +463,19 @@
     </div>
 
     <!--Aqui começa o conteúdo do FOOTER-->
-    <div id=footer>
-        <div id="footermsocial">
-            <h6 style="text-align: center; color: #3FB1A9;">Redes Sociais</h6>
-            <nav class="nav nav-pills flex-column flex-sm-row">
-                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="https://www.facebook.com/onix.geekrd.7"><i class="fab fa-facebook-square"></i>facebook</a></button>
-                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="https://www.instagram.com/onixgeekrd2019/"><i class="fab fa-instagram"></i>Instagram</a></button>
-                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="https://www.youtube.com/channel/UCczRp4bENNL_Lc32uz07C0Q/"><i class="fab fa-youtube"></i>Youtube</a></button>
-                <button type="button" class="btn btn-outline-success flex-sm-fill text-sm-center"><a href="www.github.com"><i class="fab fa-github-square"></i>Github</a></button>
-            </nav>
-        </div>
-        <br>
-        <div id="footerexpediente">
-            <p class="expediente" style="text-align: center;">PTCC - Etec Horácio Augusto da Silveira</p>
-            <p class="expediente">Desenvolvedores H.A.Ga.M: Humberto - Alex Sandro - Wellington Mendes - Gabriel Harmony - Marco Royo Felippe</p>
-        </div>
-
-        <div id="footerlicense">
-            <p class="plicense"> - copyright 2020 - </p>
-        </div>
+    <div class="footer bg-gradblue">
+        <footer class="rodape container">
+            <div class="social-icons flex-column flex-sm-row">
+                <a href="https://www.facebook.com/hawgam.sac.9"><i class="fa fa-facebook "></i></a>
+                <a href="# "><i class="fa fa-twitter "></i></a>
+                <a href="# "><i class="fa fa-google "></i></a>
+                <a href="# "><i class="fa fa-instagram "></i></a>
+                <a href="mailto:hawgam.sac@gmail.com"><i class="fa fa-envelope "></i></a>
+            </div>
+            <p class="copyright ">
+                Copyright © H.A.W.Ga.M 2020. Todos os direitos reservados.
+        </footer>
     </div>
-
 </body>
 
 </html>
